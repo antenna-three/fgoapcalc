@@ -1,0 +1,49 @@
+html {
+    padding: 16px;
+    color: #333;
+    background: #eee;
+}
+h2 {
+    margin-bottom: 4px;
+}
+div {
+    margin-bottom: 12px;
+}
+label {
+    display: block;
+}
+input, select {
+	padding: .8em;
+	border: none;
+	border-radius: .5em;
+}
+input.narrow {
+    width: 3em;
+}
+input.medium {
+    width: 5em;
+}
+input.wide {
+    width: 8em;
+}
+button {
+    padding: .8em;
+    color: #fff;
+    background-color: #46f;
+    border: none;
+    border-radius: .5em;
+}
+button:hover {
+    background-color: #88f;
+}
+button:disabled {
+    background-color: #aaa;
+}
+button.ghost {
+    color: #333;
+    background-color: #ccc0;
+    border: 1px solid #333;
+}
+button.ghost:hover {
+    background-color: #fff;
+}
