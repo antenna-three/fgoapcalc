@@ -3,6 +3,9 @@ html {
     color: #333;
     background: #eee;
 }
+body {
+    width: 20em;
+}
 h2 {
     margin-bottom: 4px;
 }
