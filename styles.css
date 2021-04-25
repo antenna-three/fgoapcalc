@@ -1,12 +1,21 @@
 html {
-    padding: 16px;
     color: #333;
     background-color: #eee;
     font: 16px sans-serif;
 }
+body {
+    margin: 0;
+    padding: 0;
+}
+.content {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: .5rem 4rem;
+    background-color: #fff;
+}
 button, input, select {
     font-family: inherit;
-    font-size: 80%;
+    font-size: 100%;
 }
 h2 {
     margin: 1rem auto .5rem;
@@ -16,11 +25,13 @@ div {
 }
 label {
     display: block;
-    margin: .1rem auto;
+}
+label.for-input {
+    margin: .2rem auto;
 }
 input, select, .frame {
-    padding: .5em 1em;
-    border: none;
+    padding: .7rem;
+    border: 1px solid #ccc;
     border-radius: .5em;
     color: #333;
     background-color: #fff;
@@ -35,7 +46,7 @@ input, select, .frame {
     width: 8em;
 }
 button {
-    padding: .5em 1em;
+    padding: .7rem;
     color: #fff;
     background-color: #46f;
     border: none;
@@ -53,9 +64,41 @@ button.ghost {
     border: 1px solid #333;
 }
 button.ghost:hover {
+    background-color: #eee;
+}
+input[type=checkbox] {
+    display: none;
+}
+label.for-checkbox {
+    padding-left: 1.5rem;
+    position: relative;
+    margin: .5rem 1.5rem .5rem auto;
+    height: 1.5rem;
+}
+label.for-checkbox::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: .2em;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #ccc;
+    border-radius: .2em;
     background-color: #fff;
+}
+input[type=checkbox]:checked + label.for-checkbox::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -.1em;
+    left: .3em;
+    width: .5em;
+    height: 1em;
+    transform: rotate(40deg);
+    border-bottom: 3px solid #46f;
+    border-right: 3px solid #46f;
 }
 .frame {
     display: inline-block;
-    font-size: 80%
 }

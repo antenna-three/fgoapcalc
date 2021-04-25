@@ -10,77 +10,75 @@
         <link rel="icon" type="image/png" href="icon/icon-192x192.png">
     </head>
     <body>
-        <h1>FGO AP calculator</h1>
-        <p>FGOで聖晶石を消費して周回するときに、残りの聖晶石がいくつになったら目標周回数に達するのかをざっと見積もるツールです。</p>
-        <p><a href="https://github.com/antenna-three/fgoapcalc#readme">使い方・ヘルプ</a></p>
-        <h2>開始時の状態</h2>
-        <div>
-            <label for="initial-time">時刻</label>
-            <input type="datetime-local" id="initial-time" class="no-reset">
-            <button id="set-time-now">現在時刻</button>
-        </div>
-        <div>
+        <div class="content">
+            <h1>FGO AP calculator</h1>
+            <p>FGOで聖晶石を消費して周回するときに、残りの聖晶石がいくつになったら目標周回数に達するのかをざっと見積もるツールです。</p>
+            <p><a href="https://github.com/antenna-three/fgoapcalc#readme">使い方・ヘルプ</a></p>
+            <h2>開始時の状態</h2>
             <div>
-                <label for="initial-saint-quartz">聖晶石所持数</label>
-                <input type="number" id="initial-saint-quartz" class="narrow">個
-                <button id="add">追加</button>
+                <label for="initial-time" class="for-input">時刻</label>
+                <input type="datetime-local" id="initial-time" class="no-reset">
+                <button id="set-time-now">現在時刻</button>
             </div>
-            <div id="input-add" hidden>
-                <input type="number" id="added-saint-quartz" class="narrow">個
-                <button id="confirm-add">決定</button>
-                <button id="cancel-add" class="ghost">キャンセル</button>
+            <div>
+                <div>
+                    <label for="initial-saint-quartz" class="for-input">聖晶石所持数</label>
+                    <input type="number" id="initial-saint-quartz" class="medium">個
+                    <button id="add">追加</button>
+                </div>
+                <div id="input-add" hidden>
+                    <input type="number" id="added-saint-quartz" class="narrow">個
+                    <button id="confirm-add">決定</button>
+                    <button id="cancel-add" class="ghost">キャンセル</button>
+                </div>
             </div>
-        </div>
-        <div>
-            <label for="initial-ap">AP</label>
-            <input type="number" id="initial-ap" class="narrow">
-            /
-            <input type="number" id="max-ap" value="144" class="narrow no-reset">
-        </div>
-        <h2>クエスト情報</h2>
-        <div>
-            <label for="quest-ap">消費AP</label>
-            <input type="number" id="quest-ap" class="narrow">
-        </div>
-        <div>
-            <label for="quest-lv">推奨Lv.</label>
-            <input type="number" id="quest-lv" class="narrow">
-        </div>
-        <h2>周回パーティ</h2>
-        <div>
-            <label for="initial-bond">開始時の累計絆ポイント</label>
-            <input type="number" id="initial-bond" class="wide">pt
-        </div>
-        <div>
-            <label for="bond-bonus">絆ボーナス</label>
-            <input type="number" id="bond-bonus" class="narrow" min="0" step="5">%
-            +
-            <select id="portrait">
-                <option selected>0
-                <option>50
-                <option>100
-            </select>
-            pt
-            <label>
-                <input type="checkbox" id="lt">ランチ
-            </label>
-            <label>
-                <input type="checkbox" id="tt">TT
-            </label>
-        </div>
-        <div>
-            <label for="lap">周回予定数</label>
-            <input type="number" id="lap" class="medium">
-        </div>
-        <button id="calc">計算</button>
-        <button id="reset" class="ghost">全消去</button>
-        <div id="result" hidden>
-            <h2>終了時の状態</h2>
-            <!--div class="frame"-->
-                <p>累計絆ポイント<br><span id="final-bond" class="frame"></span>pt</p>
-                <p>聖晶石所持数<br><span id="final-saint-quartz" class="frame"></span>個</p>
-                <p>AP<br><span id="final-ap" class="frame"></span></p>
-            <!--/div-->
+            <div>
+                <label for="initial-ap" class="for-input">AP</label>
+                <input type="number" id="initial-ap" class="narrow">
+                /
+                <input type="number" id="max-ap" value="144" class="narrow no-reset">
+            </div>
+            <h2>クエスト情報</h2>
+            <div>
+                <label for="quest-ap" class="for-input">消費AP</label>
+                <input type="number" id="quest-ap" class="narrow">
+            </div>
+            <div>
+                <label for="quest-lv" class="for-input">推奨Lv.</label>
+                <input type="number" id="quest-lv" class="narrow">
+            </div>
+            <h2>周回パーティ</h2>
+            <div>
+                <label for="initial-bond" class="for-input">開始時の累計絆ポイント</label>
+                <input type="number" id="initial-bond" class="wide">pt
+            </div>
+            <div>
+                <label for="bond-bonus" class="for-input">絆ボーナス</label>
+                <input type="number" id="bond-bonus" class="narrow" min="0" step="5">%
+                +
+                <select id="portrait">
+                    <option selected>0
+                    <option>50
+                    <option>100
+                </select>
+                pt
+                <input type="checkbox" id="lt"><label for="lt" class="for-checkbox">ランチ</label>
+                <input type="checkbox" id="tt"><label for="tt" class="for-checkbox">TT</label>
+            </div>
+            <div>
+                <label for="lap" class="for-input">周回予定数</label>
+                <input type="number" id="lap" class="medium">
+            </div>
+            <button id="calc">計算</button>
+            <button id="reset" class="ghost">全消去</button>
+            <div id="result" hidden>
+                <h2>終了時の状態</h2>
+                <!--div class="frame"-->
+                    <p>累計絆ポイント<br><span id="final-bond" class="frame"></span>pt</p>
+                    <p>聖晶石所持数<br><span id="final-saint-quartz" class="frame"></span>個</p>
+                    <p>AP<br><span id="final-ap" class="frame"></span></p>
+                <!--/div-->
+            </div>
         </div>
     </body>
 </html>
