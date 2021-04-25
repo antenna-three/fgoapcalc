@@ -43,6 +43,9 @@ input, select, .frame {
 .wide {
     width: 8em;
 }
+.ultrawide {
+    width: 12em;
+}
 button {
     padding: .7rem;
     color: #fff;
