@@ -6,10 +6,12 @@
         <title>FGO AP calculator</title>
         <link rel="stylesheet" href="styles.css">
         <script src="script.js" defer></script>
+        <link rel="apple-touch-icon" type="image/png" href="icon/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="icon/icon-192x192.png">
     </head>
     <body>
         <h1>FGO AP calculator</h1>
-        <p>FGOで聖晶石を消費して周回するときに、残りの聖晶石がいくつになったら目標周回数に達するのかをざっと見積もるツールです。<p>
+        <p>FGOで聖晶石を消費して周回するときに、残りの聖晶石がいくつになったら目標周回数に達するのかをざっと見積もるツールです。</p>
         <p><a href="https://github.com/antenna-three/fgoapcalc#readme">使い方・ヘルプ</a></p>
         <h2>開始時の状態</h2>
         <div>
@@ -53,8 +55,8 @@
             <label for="bond-bonus">絆ボーナス</label>
             <input type="number" id="bond-bonus" class="narrow" min="0" step="5">%
             +
-            <select id="portrait" class="narrow">
-                <option>0
+            <select id="portrait">
+                <option selected>0
                 <option>50
                 <option>100
             </select>
@@ -74,9 +76,11 @@
         <button id="reset" class="ghost">全消去</button>
         <div id="result" hidden>
             <h2>終了時の状態</h2>
-            <p>累計絆ポイント<br><span id="final-bond">100</span>pt</p>
-            <p>聖晶石所持数<br><span id="final-saint-quartz">100</span>個</p>
-            <p>AP<br><span id="final-ap">100</span></p>
+            <!--div class="frame"-->
+                <p>累計絆ポイント<br><span id="final-bond" class="frame"></span>pt</p>
+                <p>聖晶石所持数<br><span id="final-saint-quartz" class="frame"></span>個</p>
+                <p>AP<br><span id="final-ap" class="frame"></span></p>
+            <!--/div-->
         </div>
     </body>
 </html>

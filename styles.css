@@ -1,33 +1,41 @@
 html {
     padding: 16px;
     color: #333;
-    background: #eee;
+    background-color: #eee;
+    font: 16px sans-serif;
+}
+button, input, select {
+    font-family: inherit;
+    font-size: 80%;
 }
 h2 {
-    margin-bottom: 4px;
+    margin: 1rem auto .5rem;
 }
 div {
-    margin-bottom: 12px;
+    margin: .5rem auto 1rem;
 }
 label {
     display: block;
+    margin: .1rem auto;
 }
-input, select {
-	padding: .8em;
-	border: none;
-	border-radius: .5em;
+input, select, .frame {
+    padding: .5em 1em;
+    border: none;
+    border-radius: .5em;
+    color: #333;
+    background-color: #fff;
 }
-input.narrow {
+.narrow {
     width: 3em;
 }
-input.medium {
+.medium {
     width: 5em;
 }
-input.wide {
+.wide {
     width: 8em;
 }
 button {
-    padding: .8em;
+    padding: .5em 1em;
     color: #fff;
     background-color: #46f;
     border: none;
@@ -46,4 +54,8 @@ button.ghost {
 }
 button.ghost:hover {
     background-color: #fff;
+}
+.frame {
+    display: inline-block;
+    font-size: 80%
 }
