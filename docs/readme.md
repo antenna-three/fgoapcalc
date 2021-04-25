@@ -33,7 +33,7 @@ FGOで聖晶石を消費して周回するときに、残りの聖晶石がい�
 
 ## 動作環境
 
-PC版のGoogle Chromeにて動作を確認しています。PC版のFirefox、Internet Explorer、Safariは日付入力に対応していないため不具合が出る可能性があります。
+Google Chrome (PC, Android) にて動作を確認しています。Firefox (PC), Safari (PC), Internet Explorerは日付入力に対応していないため不具合が出る可能性があります。
 
 ## 作成者
 
@@ -43,8 +43,4 @@ Twitter: https://twitter.com/antenna_games
 
 ## ライセンス
 
-![cc0](http://i.creativecommons.org/p/zero/1.0/88x31.png)
-
-To the extent possible under law, the person who associated CC0 with this work has waived all copyright and related or neighboring rights to this work.
-
-http://creativecommons.org/publicdomain/zero/1.0/
+[CC0](/LICENSE)
