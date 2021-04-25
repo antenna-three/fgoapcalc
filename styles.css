@@ -10,7 +10,7 @@ body {
 .content {
     max-width: 40rem;
     margin: 0 auto;
-    padding: 20px 5%;
+    padding: 20px 5vw;
     background-color: #fff;
 }
 button, input, select {
