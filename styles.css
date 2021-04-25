@@ -103,5 +103,6 @@ input[type=checkbox]:checked + label.for-checkbox::after {
     border-right: 3px solid #46f;
 }
 .frame {
+    padding: 0 1em;
     display: inline-block;
 }
