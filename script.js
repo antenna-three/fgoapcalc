@@ -9,7 +9,7 @@ function reset() {
             }
         }
     }
-    document.getElementById('portrait').value = '0';
+    document.getElementById('portrait0').checked = true;
     document.getElementById('result').hidden = true;
 
     clearTimeout();
@@ -46,7 +46,6 @@ function restore() {
             }
         }
     }
-    document.getElementById('portrait').value = localStorage.getItem('portrait');
 }
 
 function calc() {
@@ -58,7 +57,7 @@ function calc() {
     const questLv = Number(document.getElementById('quest-lv').value);
     const initialBond = Number(document.getElementById('initial-bond').value);
     const bondBonus = Number(document.getElementById('bond-bonus').value);
-    const portrait = Number(document.getElementById('portrait').value);
+    const portrait = Number(document.getElementById('form').portrait.value) * 50;
     const lap = Number(document.getElementById('lap').value);
 
     const questBond = Math.floor((questLv * 10 + 15) * (1 + bondBonus / 100)) + portrait;
@@ -129,4 +128,3 @@ let inputs = document.getElementsByTagName('input');
 for (let i of inputs) {
     i.addEventListener('change', save);
 }
-document.getElementById('portrait').addEventListener('change', save);

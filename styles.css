@@ -26,7 +26,7 @@ div {
 label {
     display: block;
 }
-label.for-input {
+label.for-input, .legend{
     margin: .2rem auto;
 }
 input, select, .frame {
@@ -101,6 +101,39 @@ input[type=checkbox]:checked + label.for-checkbox::after {
     transform: rotate(40deg);
     border-bottom: 3px solid #46f;
     border-right: 3px solid #46f;
+}
+input[type=radio] {
+    display: none;
+}
+input[type=radio] + label.for-radio {
+    padding-left: 1.5rem;
+    position: relative;
+    margin: .5rem 1.5rem .5rem auto;
+    height: 1.5rem;
+}
+input[type=radio] + label.for-radio::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: .2em;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
+}
+input[type=radio]:checked + .for-radio::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: .45em;
+    left: .25em;
+    width: .5em;
+    height: .5em;
+    border: 1px solid #46f;
+    border-radius: 50%;
+    background-color: #46f;
 }
 .frame {
     padding: 0 1em;
