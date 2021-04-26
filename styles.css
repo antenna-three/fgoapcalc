@@ -1,6 +1,6 @@
 html {
     color: #333;
-    background-color: #eee;
+    background-color: #fff;
     font: 16px sans-serif;
 }
 body {
@@ -8,17 +8,21 @@ body {
     padding: 0;
 }
 .content {
-    max-width: 40rem;
+    max-width: 60rem;
     margin: 0 auto;
-    padding: 20px 5vw;
+    padding: 1rem;
     background-color: #fff;
 }
-button, input, select {
+button, input {
     font-family: inherit;
     font-size: 100%;
+    height: 2.5em;
+    padding-left: .8em;
+    padding-right: .8em;
 }
-h2 {
-    margin: 1rem auto .5rem;
+h1, h2 {
+    margin: 1rem auto;
+    border-bottom: solid 1px #ccc;
 }
 div {
     margin: .5rem auto 1rem;
@@ -29,34 +33,33 @@ label {
 label.for-input, .legend{
     margin: .2rem auto;
 }
-input, select, .frame {
-    padding: .7rem;
+input, .frame {
     border: 1px solid #ccc;
     border-radius: .5em;
     color: #333;
     background-color: #fff;
 }
 .narrow {
-    width: 3em;
+    width: 3rem;
 }
 .medium {
-    width: 5em;
+    width: 5rem;
 }
 .wide {
-    width: 8em;
+    width: 8rem;
 }
 .ultrawide {
-    width: 12em;
+    width: 12rem;
 }
 button {
-    padding: .7rem;
     color: #fff;
     background-color: #46f;
-    border: none;
+    border: 1px solid #46f;
     border-radius: .5em;
 }
 button:hover {
     background-color: #88f;
+    border: 1px solid #88f;
 }
 button:disabled {
     background-color: #aaa;
