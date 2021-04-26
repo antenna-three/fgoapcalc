@@ -4,7 +4,7 @@ FGOで聖晶石を消費して周回するときに、残りの聖晶石がい�
 
 ## 使い方
 
-1. 周回を始めるときに https://antenna-three.github.io/fgoapcalc/ を開きます。
+1. 周回を始めるときに [サイト](https://antenna-three.github.io/fgoapcalc/) を開きます。
 
 2. 周回開始時刻およびFGOの聖晶石所持数・AP、クエストの消費AP・推奨レベルを入力します。
 
@@ -39,7 +39,7 @@ Google Chrome (PC, Android) にて動作を確認しています。Firefox (PC),
 
 あんてな
 
-Twitter: https://twitter.com/antenna_games
+[Twitter](https://twitter.com/antenna_games)
 
 ## ライセンス
 
