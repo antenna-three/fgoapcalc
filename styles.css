@@ -9,8 +9,9 @@ body {
 }
 .content {
     max-width: 60rem;
-    margin: 0 auto;
-    padding: 1rem;
+    margin: 1rem auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: #fff;
 }
 button, input {
@@ -21,17 +22,20 @@ button, input {
     padding-right: .8em;
 }
 h1, h2 {
-    margin: 1rem auto;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    padding-bottom: .2em;
     border-bottom: solid 1px #ccc;
 }
 div {
-    margin: .5rem auto 1rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
 }
 label {
     display: block;
 }
 label.for-input, .legend{
-    margin: .2rem auto;
+    margin-top: .2rem;
 }
 input, .frame {
     border: 1px solid #ccc;
