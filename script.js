@@ -84,6 +84,9 @@ window.addEventListener('load', restore);
 const lt = document.getElementById('lt');
 lt.addEventListener('change', () => {
     const bondBonus = document.getElementById('bond-bonus');
+    if (!bondBonus.value) {
+        bondBonus.value = "0";
+    }
     if (lt.checked) {
         bondBonus.stepUp(2);
     } else {
@@ -94,6 +97,9 @@ lt.addEventListener('change', () => {
 const tt = document.getElementById('tt');
 tt.addEventListener('change', () => {
     const bondBonus = document.getElementById('bond-bonus');
+    if (!bondBonus.value) {
+        bondBonus.value = "0";
+    }
     if (tt.checked) {
         bondBonus.stepUp(3);
     } else {
