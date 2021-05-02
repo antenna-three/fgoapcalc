@@ -67,7 +67,7 @@ function calc() {
     const recoveredAp = Math.floor((Date.now() - initialTime) / 1000 / 60 / 5);
     const paidAp = consumedAp - initialAp - recoveredAp;
     const consumedSaintQuartz = Math.ceil(paidAp / maxAp);
-    const finalAp = maxAp - paidAp % maxAp;
+    const finalAp = (maxAp - paidAp % maxAp) % maxAp;
     const finalSaintQuartz = initialSaintQuartz - consumedSaintQuartz;
 
     document.getElementById('final-bond').innerHTML = finalBond;
