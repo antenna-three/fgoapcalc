@@ -58,7 +58,9 @@ function calc() {
     const portrait = Number(document.getElementById('form').portrait.value) * 50;
     const lap = Number(document.getElementById('lap').value);
 
-    const questBond = Math.floor((questLv * 10 + 15) * (1 + bondBonus / 100)) + portrait;
+    const questBondBase = questLv * 10 + 15;
+    const questBond = Math.floor(questBondBase * (1 + bondBonus / 100)) + portrait;
+    const questBondBonus = questBond - questBondBase;
     const finalBond = initialBond + questBond * lap;
 
     const consumedAp = questAp * lap;
@@ -68,6 +70,8 @@ function calc() {
     const finalAp = (maxAp - paidAp % maxAp) % maxAp;
     const finalSaintQuartz = initialSaintQuartz - consumedSaintQuartz;
 
+    document.getElementById('quest-bond-base').innerHTML = questBondBase;
+    document.getElementById('quest-bond-bonus').innerHTML = questBondBonus;
     document.getElementById('final-bond').innerHTML = finalBond;
     document.getElementById('final-saint-quartz').innerHTML = finalSaintQuartz;
     document.getElementById('final-ap').innerHTML = finalAp;
