@@ -21,12 +21,14 @@
                     <label for="initial-time" class="for-input">時刻</label>
                     <input type="datetime-local" id="initial-time" class="ultrawide no-reset">
                     <button id="set-time-now">現在時刻</button>
+                    <span class="help">例: 2015/07/30 00:00</span>
                 </div>
                 <div>
                     <div>
                         <label for="initial-saint-quartz" class="for-input">聖晶石所持数</label>
                         <input type="number" id="initial-saint-quartz" class="medium">個
                         <button id="add">追加</button>
+                        <span class="help">ログインボーナスや絆レベルアップ報酬などで聖晶石を獲得したときは忘れず追加してください。</span>
                     </div>
                     <div id="input-add" hidden>
                         <input type="number" id="added-saint-quartz" class="narrow">個
@@ -48,15 +50,18 @@
                 <div>
                     <label for="quest-lv" class="for-input">推奨Lv.</label>
                     <input type="number" id="quest-lv" class="narrow">
+                    <span class="help">90+の場合は90と入力してください。</span>
                 </div>
                 <h2>周回パーティ</h2>
                 <div>
                     <label for="initial-bond" class="for-input">開始時の累計絆ポイント</label>
                     <input type="number" id="initial-bond" class="wide">pt
+                    <span class="help">正確な周回数を計測するために使用します。周回パーティに常に編成されていて、他のクエストに出撃しないサーヴァントを選んでください。</span>
                 </div>
                 <div>
                     <label for="bond-bonus" class="for-input">絆ボーナス</label>
                     <input type="number" id="bond-bonus" class="narrow" min="0" step="5">%
+                    <span class="help">礼装によるボーナスとイベントボーナスの合計を入力してください。</span>
                     <input type="checkbox" id="lt"><label for="lt" class="for-checkbox">ランチ</label>
                     <input type="checkbox" id="tt"><label for="tt" class="for-checkbox">TT</label>
                 </div>

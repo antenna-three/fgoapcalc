@@ -142,6 +142,10 @@ input[type=radio]:checked + .for-radio::after {
     border-radius: 50%;
     background-color: #46f;
 }
+.help {
+    display: none;
+    color: #777;
+}
 .frame {
     padding: 0 1em;
     display: inline-block;

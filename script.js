@@ -11,8 +11,6 @@ function reset() {
     }
     document.getElementById('portrait0').checked = true;
     document.getElementById('result').hidden = true;
-
-    clearTimeout();
 }
 
 function setTimeNow() {
@@ -73,9 +71,6 @@ function calc() {
     document.getElementById('final-bond').innerHTML = finalBond;
     document.getElementById('final-saint-quartz').innerHTML = finalSaintQuartz;
     document.getElementById('final-ap').innerHTML = finalAp;
-    document.getElementById('result').hidden = false;
-
-    setTimeout(calc, 5 * 60 * 1000);
 }
 
 
@@ -127,10 +122,23 @@ document.getElementById('cancel-add').addEventListener('click', () => {
     document.getElementById('input-add').hidden = true;
     document.getElementById('add').disabled = false;
 });
-document.getElementById('calc').addEventListener('click', calc);
+document.getElementById('calc').addEventListener('click', () => {
+    calc();
+    document.getElementById('result').hidden = false;
+});
 document.getElementById('reset').addEventListener('click', reset);
 
 let inputs = document.getElementsByTagName('input');
 for (let i of inputs) {
     i.addEventListener('change', save);
+    if (i.parentElement.getElementsByClassName('help').length > 0) {
+        i.addEventListener('focusin', (e) => {
+            e.target.parentElement.getElementsByClassName('help')[0].style.display = 'block';
+        });
+        i.addEventListener('focusout', (e) => {
+            e.target.parentElement.getElementsByClassName('help')[0].style.display = 'none';
+        });
+    }
 }
+
+setInterval(calc, 5 * 60 * 1000);
